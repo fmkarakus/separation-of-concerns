@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const ulEl = document.createElement('ul');
+const ulEl = document.createElement("ul");
 ulEl.innerHTML = `
   <li> toad </li>
   <li>Frog</li>
@@ -9,15 +9,15 @@ ulEl.innerHTML = `
 console.log(ulEl.nodeName, ulEl.cloneNode(true));
 
 // --- write some code ---
-
-
-
+ulEl.children[1].innerHTML = "frog";
+ulEl.children[2].innerHTML = "salamander";
+ulEl.children[0].innerHTML = "toad";
 
 // --- --- --- --- --- ---
 
 console.log(ulEl.nodeName, ulEl.cloneNode(true));
 
-const expectedInnerHTMLs = ['toad', 'frog', 'salamander'];
+const expectedInnerHTMLs = ["toad", "frog", "salamander"];
 for (let i = 0; i < expectedInnerHTMLs.length; i++) {
   const actual = ulEl.children[i].innerHTML;
   const expected = expectedInnerHTMLs[i];

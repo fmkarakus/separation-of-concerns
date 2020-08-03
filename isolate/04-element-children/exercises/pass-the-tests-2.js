@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const divEl = document.createElement('div');
+const divEl = document.createElement("div");
 divEl.innerHTML = `
   <a href='#toop'>
     <button>back to the top</button>
@@ -10,16 +10,16 @@ console.log(divEl.nodeName, divEl.cloneNode(true));
 
 // --- write some code ---
 
-
-
+divEl.children[0].href = "#top";
+divEl.children[0].children[0].innerHTML = "to the top";
 
 // --- --- --- --- --- ---
 
 console.log(divEl.nodeName, divEl.cloneNode(true));
 
-console.assert(divEl.children[0].href === '#top',
-  'Test: href');
+console.assert(divEl.children[0].href === "#top", "Test: href");
 
-console.assert(divEl.children[0].children[0].innerHTML === 'to the top',
-  'Test: button innerHTML');
-
+console.assert(
+  divEl.children[0].children[0].innerHTML === "to the top",
+  "Test: button innerHTML"
+);
