@@ -1,6 +1,9 @@
 "use strict";
 
 const headerEl = document.createElement("h1");
+console.log("initial header:", headerEl.cloneNode(true));
+
+const headerEl = document.createElement("h1");
 headerEl.type = "checkbox";
 console.log("initial header:", headerEl.cloneNode(true));
 

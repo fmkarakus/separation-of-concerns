@@ -7,7 +7,7 @@ ulEl.innerHTML = `
   <li>salamander</li>
   <li>fish</li>
 `;
-console.log(ulEl.nodeName, ulEl.cloneNode(true));
+console.log(ulEl.nodeName + ' (before)', ulEl.cloneNode(true));
 
 // --- write some code ---
 ulEl.children[0].innerHTML = "toad";
@@ -17,7 +17,7 @@ ulEl.removeChild(ulEl.children[3]);
 
 // --- --- --- --- --- ---
 
-console.log(ulEl.nodeName, ulEl.cloneNode(true));
+console.log(ulEl.nodeName + ' (after)', ulEl.cloneNode(true));
 
 console.assert(
   ulEl.childElementCount === 3,
